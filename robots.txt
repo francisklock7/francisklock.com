@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://francisklock.com/sitemap.xml
