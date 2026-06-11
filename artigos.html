@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artigos | Francis Klock — Novo Futebol</title>
+<meta name="description" content="Reflexões de Francis Klock sobre o Novo Futebol, formação de atletas, categorias de base e o papel da educação no desenvolvimento humano no esporte.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://francisklock.com.br/artigos">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--black:#080808;--off:#0f0f0f;--white:#f2f1ec;--gray:#666;--lgray:#999;--border:rgba(242,241,236,0.09);--mono:"Space Mono",monospace;--sans:"DM Sans",sans-serif}
+html{scroll-behavior:smooth}
+body{background:var(--black);color:var(--white);font-family:var(--sans);font-weight:300;line-height:1.7;overflow-x:hidden}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.4rem 4rem;border-bottom:0.5px solid var(--border);backdrop-filter:blur(16px);background:rgba(8,8,8,0.9)}
+.nav-logo{font-family:var(--mono);font-size:13px;letter-spacing:0.15em;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:10px}
+.nav-back{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;color:var(--gray);text-decoration:none;text-transform:uppercase;transition:color 0.2s}
+.nav-back:hover{color:var(--white)}
+
+.page-header{padding:10rem 4rem 5rem;border-bottom:0.5px solid var(--border);max-width:860px}
+.label{font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gray);margin-bottom:2rem;display:flex;align-items:center;gap:12px}
+.label::after{content:"";flex:0 0 36px;height:0.5px;background:var(--border)}
+h1{font-family:var(--mono);font-size:clamp(2.2rem,4.5vw,4.5rem);font-weight:700;line-height:0.93;letter-spacing:-0.025em;margin-bottom:1.5rem}
+h1 em{font-style:normal;color:transparent;-webkit-text-stroke:1px rgba(242,241,236,0.3)}
+.page-sub{font-size:16px;color:var(--gray);max-width:520px;line-height:1.85}
+
+.articles-list{padding:5rem 4rem;display:flex;flex-direction:column;gap:0;border-bottom:0.5px solid var(--border)}
+.article-item{display:grid;grid-template-columns:120px 1fr;gap:3rem;padding:3rem 0;border-bottom:0.5px solid var(--border);text-decoration:none;transition:background 0.15s;cursor:pointer}
+.article-item:last-child{border-bottom:none}
+.article-item:hover .article-title{color:var(--lgray)}
+.article-meta{display:flex;flex-direction:column;gap:0.5rem;padding-top:0.3rem}
+.article-date{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:var(--gray);text-transform:uppercase}
+.article-num{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;color:#333}
+.article-body{}
+.article-tag{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);margin-bottom:1rem;display:inline-block;border:0.5px solid var(--border);padding:4px 10px}
+.article-title{font-family:var(--mono);font-size:clamp(1rem,1.8vw,1.4rem);font-weight:700;color:var(--white);line-height:1.25;margin-bottom:1rem;letter-spacing:-0.01em;transition:color 0.2s}
+.article-excerpt{font-size:15px;color:var(--gray);line-height:1.85;max-width:580px}
+.article-cta{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--lgray);margin-top:1.2rem;transition:color 0.2s}
+.article-item:hover .article-cta{color:var(--white)}
+
+/* ARTICLE FULL VIEW */
+.article-full{display:none;padding:5rem 4rem;max-width:720px}
+.article-full.active{display:block}
+.articles-list.hidden{display:none}
+.page-header.hidden{display:none}
+
+.back-to-list{font-family:var(--mono);font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);cursor:pointer;display:inline-flex;align-items:center;gap:8px;margin-bottom:3rem;background:none;border:none;transition:color 0.2s}
+.back-to-list:hover{color:var(--white)}
+
+.full-label{font-family:var(--mono);font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--gray);margin-bottom:1.5rem;display:flex;align-items:center;gap:12px}
+.full-label::after{content:"";flex:0 0 36px;height:0.5px;background:var(--border)}
+.full-title{font-family:var(--mono);font-size:clamp(1.6rem,3.5vw,3rem);font-weight:700;line-height:1.05;letter-spacing:-0.02em;margin-bottom:2.5rem}
+.full-intro{font-size:19px;color:var(--lgray);line-height:1.85;margin-bottom:3rem;font-style:italic;border-left:2px solid var(--border);padding-left:1.8rem}
+.full-body p{font-size:16px;color:var(--gray);line-height:1.95;margin-bottom:1.6rem}
+.full-body p strong{color:var(--white);font-weight:400}
+.full-body h3{font-family:var(--mono);font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--white);margin:2.5rem 0 1rem}
+.full-divider{width:40px;height:0.5px;background:var(--border);margin:3rem 0}
+.full-author{display:flex;align-items:center;gap:1rem;padding-top:2rem;border-top:0.5px solid var(--border)}
+.full-author-name{font-family:var(--mono);font-size:11px;letter-spacing:0.12em;color:var(--lgray)}
+.full-author-handle{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:var(--gray)}
+
+footer{padding:2rem 4rem;display:flex;justify-content:space-between;align-items:center;border-top:0.5px solid var(--border)}
+footer p{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:#2a2a2a;text-transform:uppercase}
+footer a{font-family:var(--mono);font-size:10px;letter-spacing:0.1em;color:#444;text-transform:uppercase;text-decoration:none;transition:color 0.2s}
+footer a:hover{color:var(--white)}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">FK_</a>
+  <a href="index.html" class="nav-back">&larr; Voltar</a>
+</nav>
+
+<!-- HEADER LIST VIEW -->
+<div class="page-header" id="listHeader">
+  <div class="label">Artigos</div>
+  <h1>Pensamentos<br>sobre o <em>novo</em><br>futebol</h1>
+  <p class="page-sub">Reflexões sobre formação de atletas, educação esportiva, categorias de base e tudo que envolve construir um futebol melhor.</p>
+</div>
+
+<!-- ARTICLES LIST -->
+<div class="articles-list" id="articlesList">
+
+  <div class="article-item" onclick="openArticle('a1')">
+    <div class="article-meta">
+      <span class="article-date">Jun 2025</span>
+      <span class="article-num">001</span>
+    </div>
+    <div class="article-body">
+      <span class="article-tag">Manifesto</span>
+      <div class="article-title">O Novo Futebol: por que tudo que tu conheces sobre formação precisa mudar</div>
+      <p class="article-excerpt">O futebol que tu viste os teus pais jogarem não existe mais. O mundo mudou, o atleta mudou, a família mudou. Mas a forma como a grande maioria dos clubes forma seus jovens continua a mesma de décadas atrás.</p>
+      <span class="article-cta">Ler artigo &rarr;</span>
+    </div>
+  </div>
+
+  <div class="article-item" onclick="openArticle('a2')">
+    <div class="article-meta">
+      <span class="article-date">Jun 2025</span>
+      <span class="article-num">002</span>
+    </div>
+    <div class="article-body">
+      <span class="article-tag">Formação</span>
+      <div class="article-title">O que eu acredito sobre formar atletas de verdade</div>
+      <p class="article-excerpt">Trabalhei anos com tecnologia e dados. Aprendi que processo sem intenção não serve pra nada. E foi exatamente isso que trouxe pra dentro do futebol: a crença de que desenvolvimento humano precisa de estrutura, não de sorte.</p>
+      <span class="article-cta">Ler artigo &rarr;</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- ARTICLE 1 FULL -->
+<div class="article-full" id="a1">
+  <button class="back-to-list" onclick="closeArticle()">
+    &larr; Todos os artigos
+  </button>
+  <div class="full-label">Manifesto / Jun 2025</div>
+  <h2 class="full-title">O Novo Futebol: por que tudo que tu conheces sobre formação precisa mudar</h2>
+  <p class="full-intro">O futebol que tu viste os teus pais jogarem não existe mais. O mundo mudou, o atleta mudou, a família mudou. Mas a forma como a grande maioria dos clubes forma seus jovens continua a mesma de décadas atrás.</p>
+  <div class="full-body">
+    <p>Quando falo em <strong>Novo Futebol</strong>, não estou falando de tecnologia de ponta, de câmeras de rastreamento ou de inteligência artificial. Estou falando de algo muito mais simples e muito mais profundo: estou falando de intenção.</p>
+    <p>A maioria dos clubes brasileiros ainda opera no improviso. Não existe documentação do desenvolvimento individual de cada atleta. Não existe metodologia clara de formação humana. Não existe um processo que acompanhe o jovem além da bola.</p>
+    <p>E o resultado disso a gente vê todo dia: atletas talentosos que somem, que param, que se perdem pelo caminho. Não por falta de talento. Por falta de estrutura.</p>
+
+    <h3>O Brasil não está atrasado em talento</h3>
+    <p>Essa é a parte que mais me incomoda quando discuto o futebol brasileiro. A gente sempre culpa o talento, a gente sempre culpa o atleta. Mas quando eu passei um período no <strong>Independiente del Valle</strong>, no Equador, a percepção que tive foi completamente diferente.</p>
+    <p>O que o Del Valle entendeu antes da maioria é que <strong>educação é o ponto de partida</strong>. Não um complemento, não um diferencial. É o core. Tudo o mais vem depois.</p>
+    <p>Tudo documentado. Tudo com processo. Cada etapa do desenvolvimento pensada e acompanhada com intenção. E o Brasil, na grande maioria, simplesmente não cuida disso.</p>
+
+    <h3>O que o Novo Futebol exige</h3>
+    <p>O Novo Futebol exige que a gente pare de tratar o atleta apenas como um jogador e comece a enxergá-lo como uma pessoa em desenvolvimento. Isso muda tudo: muda a forma de treinar, muda a forma de comunicar, muda a forma de envolver a família.</p>
+    <p>Porque a família é parte do processo. Sempre foi. Só que poucos clubes tratam assim. A maioria ainda vê os pais como um problema a ser gerenciado, não como aliados da formação.</p>
+    <p>O Novo Futebol entende que sem a família no centro do processo, o atleta fica sozinho num ambiente que pode ser muito cruel emocionalmente. E um atleta emocionalmente instável não chega longe, não importa o quanto de talento ele tenha.</p>
+
+    <h3>Por onde começar</h3>
+    <p>Comece pela pergunta mais simples e mais ignorada do futebol de base: <strong>tu sabes quem é esse atleta além do que ele faz dentro de campo?</strong></p>
+    <p>Se a resposta for não, é por aí que começa o Novo Futebol.</p>
+    <div class="full-divider"></div>
+    <div class="full-author">
+      <div>
+        <div class="full-author-name">Francis Klock</div>
+        <div class="full-author-handle">@francisklock</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ARTICLE 2 FULL -->
+<div class="article-full" id="a2">
+  <button class="back-to-list" onclick="closeArticle()">
+    &larr; Todos os artigos
+  </button>
+  <div class="full-label">Formação / Jun 2025</div>
+  <h2 class="full-title">O que eu acredito sobre formar atletas de verdade</h2>
+  <p class="full-intro">Trabalhei anos com tecnologia e dados. Aprendi que processo sem intenção não serve pra nada. E foi exatamente isso que trouxe pra dentro do futebol: a crença de que desenvolvimento humano precisa de estrutura, não de sorte.</p>
+  <div class="full-body">
+    <p>Antes de entrar no mundo do futebol, passei anos trabalhando com <strong>tecnologia, dados e transformação na indústria</strong>. E a coisa mais importante que aprendi nesse tempo não foi nenhuma ferramenta, nenhuma linguagem de programação, nenhum framework.</p>
+    <p>Foi que <strong>resultado consistente é consequência de processo consistente</strong>. Sempre. Sem exceção.</p>
+    <p>Quando comecei a me aprofundar no futebol de base brasileiro, a primeira coisa que me saltou aos olhos foi exatamente a ausência disso. Processo. Metodologia. Documentação. Acompanhamento individual. As coisas mais básicas que qualquer organização séria tem, simplesmente não existiam na maioria dos clubes que conheci.</p>
+
+    <h3>O que forma um atleta de verdade</h3>
+    <p>Formar um atleta de verdade não é só ensinar a chutar uma bola. É construir uma pessoa que saiba lidar com pressão, com fracasso, com expectativa. Que tenha clareza de quem ela é além do esporte. Que tenha uma família que entenda o processo e participe dele com consciência.</p>
+    <p>Isso não acontece por acaso. Isso precisa de <strong>intenção, método e tempo</strong>.</p>
+    <p>E é exatamente isso que eu acredito e que o Base de Campeão foi construído pra fazer: trazer estrutura, metodologia e educação pro centro da formação de atletas no Brasil.</p>
+
+    <h3>Tecnologia como ferramenta, nunca como fim</h3>
+    <p>Acredito que com tecnologia tudo é possível, mas sempre com consciência de que existe um custo, um tempo e um risco envolvidos. Tecnologia é ferramenta. Ela amplifica o que já existe. Se o que existe é bom, ela potencializa. Se o que existe é ruim, ela apenas acelera o problema.</p>
+    <p>Por isso a tecnologia no futebol precisa estar a serviço do desenvolvimento humano, não substituí-lo. Dados servem pra entender melhor o atleta. Plataformas servem pra conectar melhor as pessoas. O centro de tudo, sempre, é o ser humano.</p>
+
+    <h3>O que me move</h3>
+    <p>Me move saber que tem um jovem em algum lugar do Brasil com talento de sobra e sem ninguém pra ajudá-lo a entender o caminho. Me move saber que tem uma família que entregou o filho pro futebol sem entender minimamente como esse sistema funciona.</p>
+    <p>Se é pra fazer, vamos fazer o melhor. Porque <strong>mais do mesmo tá cheio por aí</strong>, e esses jovens merecem algo diferente.</p>
+    <div class="full-divider"></div>
+    <div class="full-author">
+      <div>
+        <div class="full-author-name">Francis Klock</div>
+        <div class="full-author-handle">@francisklock</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>Francis Klock &copy; 2025</p>
+  <a href="index.html">Voltar ao início &rarr;</a>
+</footer>
+
+<script>
+function openArticle(id) {
+  document.getElementById('listHeader').classList.add('hidden');
+  document.getElementById('articlesList').classList.add('hidden');
+  document.querySelectorAll('.article-full').forEach(el => el.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function closeArticle() {
+  document.getElementById('listHeader').classList.remove('hidden');
+  document.getElementById('articlesList').classList.remove('hidden');
+  document.querySelectorAll('.article-full').forEach(el => el.classList.remove('active'));
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+</script>
+
+</body>
+</html>
