@@ -22,15 +22,29 @@ main{position:relative;min-height:100vh;display:flex;flex-direction:column;justi
 .tag::before{content:"";width:20px;height:0.5px;background:var(--gray)}
 h1{font-family:var(--mono);font-size:clamp(2.6rem,5.5vw,5rem);font-weight:700;line-height:0.95;letter-spacing:-0.03em;margin-bottom:2rem}
 p.sub{font-size:18px;color:var(--lgray);max-width:32em;margin-bottom:3rem}
-.actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:5rem}
+.actions{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:4.5rem}
 .btn{font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;padding:15px 26px;text-decoration:none;transition:opacity 0.2s,border-color 0.2s}
 .btn-primary{color:var(--black);background:var(--white)}
 .btn-primary:hover{opacity:0.85}
 .btn-secondary{color:var(--white);border:0.5px solid rgba(242,241,236,0.25)}
 .btn-secondary:hover{border-color:rgba(242,241,236,0.6)}
-.next{border-top:0.5px solid var(--border);padding-top:2.5rem;max-width:32em}
-.next p{font-size:15px;color:var(--lgray);margin-bottom:1rem}
-.next a{font-family:var(--mono);font-size:12px;letter-spacing:0.08em;color:var(--white)}
+.content{max-width:960px}
+.next{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border:0.5px solid var(--border)}
+.panel{display:flex;flex-direction:column;justify-content:space-between;gap:2.2rem;padding:2.6rem 2.4rem;text-decoration:none;transition:background 0.2s,opacity 0.2s}
+.panel-ig{background:var(--black);color:var(--white)}
+.panel-ig:hover{background:#121212}
+.panel-wa{background:var(--white);color:var(--black)}
+.panel-wa:hover{opacity:0.92}
+.panel svg{width:44px;height:44px;flex-shrink:0}
+.panel-top{display:flex;flex-direction:column;gap:1.4rem}
+.panel h2{font-family:var(--mono);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;line-height:1.1;letter-spacing:-0.02em}
+.panel p{font-size:15px;line-height:1.7}
+.panel-ig p{color:var(--lgray)}
+.panel-wa p{color:#555}
+.panel-action{font-family:var(--mono);font-size:11px;letter-spacing:0.16em;text-transform:uppercase;padding:15px 22px;text-align:center}
+.panel-ig .panel-action{background:var(--white);color:var(--black)}
+.panel-wa .panel-action{background:var(--black);color:var(--white)}
+.handle{font-family:var(--mono);font-size:13px;letter-spacing:0.06em;color:var(--white)}
 @media (max-width:768px){
   nav{padding:1.2rem 1.5rem}
   main{padding:7rem 1.5rem 4rem;justify-content:flex-start}
@@ -38,6 +52,8 @@ p.sub{font-size:18px;color:var(--lgray);max-width:32em;margin-bottom:3rem}
   p.sub{font-size:16px}
   .actions{flex-direction:column}
   .btn{text-align:center}
+  .next{grid-template-columns:1fr}
+  .panel{padding:2rem 1.5rem}
 }
 </style>
 </head>
@@ -48,14 +64,29 @@ p.sub{font-size:18px;color:var(--lgray);max-width:32em;margin-bottom:3rem}
   <div class="content">
     <div class="tag">Acesso liberado</div>
     <h1>Teu guia tá pronto.</h1>
-    <p class="sub">Baixa o PDF pra guardar e mandar pra outros pais, ou lê direto aqui. Salva o PDF no celular, ele é o material que tu vai querer ter à mão quando alguém procurar a tua família.</p>
+    <p class="sub">Baixa o PDF pra guardar no celular e mandar pra outros pais, ou lê direto aqui. É o material que tu vai querer ter à mão quando alguém procurar a tua família.</p>
     <div class="actions">
       <a class="btn btn-primary" href="guia-fifa-agentes-pais.pdf" download>Baixar em PDF</a>
       <a class="btn btn-secondary" href="guia-agentes-online.html">Ler online</a>
     </div>
     <div class="next">
-      <p>Toda semana eu falo sobre formação, carreira e o que pai de atleta precisa saber pra proteger o filho no futebol.</p>
-      <a href="https://www.instagram.com/francisklock" target="_blank" rel="noopener">Seguir @francisklock no Instagram</a>
+      <a class="panel panel-ig" href="https://www.instagram.com/francisklock" target="_blank" rel="noopener">
+        <div class="panel-top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.3"/><circle cx="17.6" cy="6.4" r="1.1" fill="currentColor" stroke="none"/></svg>
+          <h2>Segue no Instagram</h2>
+          <p>Toda semana eu falo de formação, carreira e do que pai de atleta precisa saber pra proteger o filho no futebol.</p>
+          <span class="handle">@francisklock</span>
+        </div>
+        <span class="panel-action">Seguir no Instagram</span>
+      </a>
+      <a class="panel panel-wa" href="https://wa.me/55XXXXXXXXXXX?text=Oi%2C%20Francis%21%20Baixei%20o%20guia%20sobre%20agentes%20e%20quero%20uma%20ajuda%20personalizada%20pro%20meu%20filho." target="_blank" rel="noopener">
+        <div class="panel-top">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8a9.2 9.2 0 0 0-7.9 13.9L2.8 21.2l4.6-1.2A9.2 9.2 0 1 0 12 2.8z"/><path d="M8.6 7.9c.3-.6.6-.6.9-.6h.6c.2 0 .4 0 .6.5l.8 1.9c.1.3 0 .5-.1.7l-.5.6c-.2.2-.2.4 0 .7.5.9 1.4 1.9 2.6 2.5.3.1.5.1.7-.1l.7-.8c.2-.3.4-.3.7-.2l1.9.9c.3.1.4.3.4.5 0 .7-.4 1.5-1 1.8-.7.4-1.9.6-4-.4-2.3-1.1-3.9-3.3-4.3-4.1-.6-1.1-.7-2.5 0-3.9z" fill="currentColor" stroke="none"/></svg>
+          <h2>Quero uma ajuda personalizada</h2>
+          <p>Teu filho já foi procurado por alguém ou tu tem uma decisão pra tomar agora? Me chama e a gente conversa sobre o caso dele.</p>
+        </div>
+        <span class="panel-action">Conversar no WhatsApp</span>
+      </a>
     </div>
   </div>
 </main>
