@@ -103,6 +103,19 @@ footer a:hover{color:var(--white)}
 <!-- ARTICLES LIST -->
 <div class="articles-list" id="articlesList">
 
+  <a class="article-item" href="artigo-agentes-de-futebol.html" style="color:inherit">
+    <div class="article-meta">
+      <span class="article-date">Out 2026</span>
+      <span class="article-num">003</span>
+    </div>
+    <div class="article-body">
+      <span class="article-tag">Carreira</span>
+      <div class="article-title">O que a FIFA quer que todo pai saiba antes de falar com um agente</div>
+      <p class="article-excerpt">Em 2023 a FIFA mudou as regras dos agentes de futebol. Quase nenhuma família ficou sabendo. E é justamente a família que mais precisa saber.</p>
+      <span class="article-cta">Ler artigo &rarr;</span>
+    </div>
+  </a>
+
   <div class="article-item" onclick="openArticle('a1')">
     <div class="article-meta">
       <span class="article-date">Jun 2026</span>
@@ -289,6 +302,11 @@ function closeArticle() {
   document.querySelectorAll('.article-full').forEach(el => el.classList.remove('active'));
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const id = new URLSearchParams(location.search).get('a');
+  if (id && document.getElementById(id)) openArticle(id);
+});
 </script>
 
 </body>

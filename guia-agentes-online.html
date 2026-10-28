@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="light">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia Oficial FIFA para Pais & O Novo Futebol — Francis Klock / Base de Campeão</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: {
+          sans: ['Inter', 'sans-serif'],
+          display: ['Space Grotesk', 'sans-serif'],
+          mono: ['Space Mono', 'monospace'],
+        },
+        colors: {
+          mono: {
+            50: '#fafafa',
+            100: '#f4f4f5',
+            200: '#e4e4e7',
+            300: '#d4d4d8',
+            400: '#a1a1aa',
+            500: '#71717a',
+            600: '#52525b',
+            700: '#3f3f46',
+            800: '#27272a',
+            900: '#18181b',
+            950: '#09090b',
+          }
+        }
+      }
+    }
+  }
+</script>
+<style>
+  /* PRINT OPTIMIZATION FOR A4 & PDF EXPORT */
+  @page {
+    size: A4 portrait;
+    margin: 10mm 12mm 10mm 12mm;
+  }
+
+  @media print {
+    *, *::before, *::after {
+      box-sizing: border-box !important;
+    }
+
+    html, body {
+      background-color: #ffffff !important;
+      color: #000000 !important;
+      font-size: 9.5pt !important;
+      line-height: 1.35 !important;
+      width: 100% !important;
+      height: auto !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+
+    .page-sheet {
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 0 0 1.5rem 0 !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-height: auto !important;
+      page-break-after: always !important;
+      break-after: page !important;
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+      background: #ffffff !important;
+      color: #000000 !important;
+      border: none !important;
+    }
+
+    .page-sheet:last-child {
+      page-break-after: avoid !important;
+      break-after: avoid !important;
+    }
+
+    .mono-card, .mono-card-dark, .mono-alert, .checklist-table, table, tr, div {
+      page-break-inside: avoid !important;
+      break-inside: avoid !important;
+    }
+
+    .border-print {
+      border-color: #18181b !important;
+    }
+
+    .bg-print-dark {
+      background-color: #09090b !important;
+      color: #ffffff !important;
+    }
+
+    .bg-print-light {
+      background-color: #f4f4f5 !important;
+      color: #000000 !important;
+    }
+
+    .text-print-muted {
+      color: #52525b !important;
+    }
+
+    .badge-print {
+      border: 1px solid #000000 !important;
+      color: #000000 !important;
+      background: transparent !important;
+    }
+  }
+
+  /* SCREEN DISPLAY STYLING - LIGHT THEME */
+  .page-sheet {
+    background-color: #ffffff;
+    border: 1px solid #e4e4e7;
+    width: 100%;
+    max-width: 860px;
+    min-height: 1120px;
+    margin: 28px auto;
+    padding: 3rem 3.5rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    border-radius: 2px;
+    position: relative;
+    box-sizing: border-box;
+    color: #18181b;
+  }
+
+  /* Custom subtle borders and cards */
+  .mono-card {
+    background-color: #fafafa;
+    border: 1px solid #e4e4e7;
+    padding: 1.25rem;
+    border-radius: 2px;
+  }
+
+  .mono-card-dark {
+    background-color: #18181b;
+    color: #ffffff;
+    border: 1px solid #27272a;
+    padding: 1.25rem;
+    border-radius: 2px;
+  }
+
+  .mono-alert {
+    background-color: #f4f4f5;
+    border-left: 3px solid #09090b;
+    padding: 1.25rem;
+  }
+
+  .checklist-table th {
+    font-family: 'Space Mono', monospace;
+    font-size: 8pt;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: #f4f4f5;
+    color: #09090b;
+    padding: 10px 12px;
+    border-bottom: 2px solid #18181b;
+  }
+
+  .checklist-table td {
+    border-bottom: 1px solid #e4e4e7;
+    padding: 10px 12px;
+    font-size: 9pt;
+  }
+</style>
+</head>
+<body class="bg-mono-100 text-mono-900 font-sans antialiased selection:bg-black selection:text-white">
+
+<!-- BARRA DE NAVEGAÇÃO E AÇÕES (TELA APENAS) -->
+<header class="no-print bg-white/90 backdrop-blur-md border-b border-mono-200 sticky top-0 z-50 px-6 py-3.5 shadow-sm">
+  <div class="max-w-6xl mx-auto flex flex-wrap justify-between items-center gap-4">
+    <div class="flex items-center gap-3">
+      <div class="w-7 h-7 bg-black text-white font-mono font-bold flex items-center justify-center text-xs tracking-tighter">
+        BK
+      </div>
+      <div>
+        <h1 class="font-display font-bold text-xs uppercase tracking-wider text-mono-950">FRANCIS KLOCK <span class="text-mono-400">|</span> BASE DE CAMPEÃO</h1>
+        <p class="font-mono text-[10px] text-mono-500">Guia de Proteção Legal e Gestão Familiar — FIFA Agent Regulations (FFAR)</p>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <button onclick="document.getElementById('print-instructions').classList.toggle('hidden')" class="bg-mono-100 hover:bg-mono-200 text-mono-800 font-mono text-xs font-bold px-3 py-2.5 transition flex items-center gap-1.5 border border-mono-300">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+        Dicas de Impressão
+      </button>
+      <button onclick="window.print()" class="bg-mono-950 hover:bg-mono-800 text-white font-mono text-xs font-bold px-4 py-2.5 rounded-none transition flex items-center gap-2 tracking-wider uppercase border border-mono-950">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
+        </svg>
+        Exportar / Imprimir PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- MODAL COM DICAS DE CONFIGURAÇÃO DE IMPRESSÃO -->
+  <div id="print-instructions" class="hidden max-w-6xl mx-auto mt-3 p-4 bg-mono-950 text-white font-mono text-xs border border-mono-800 rounded-none shadow-lg">
+    <div class="flex justify-between items-start mb-2 border-b border-mono-800 pb-2">
+      <span class="font-bold uppercase text-white">Configuração Ideal para Impressão / Salvamento em PDF:</span>
+      <button onclick="document.getElementById('print-instructions').classList.add('hidden')" class="text-mono-400 hover:text-white font-bold">✕ FECHAR</button>
+    </div>
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-3 text-[11px] text-mono-300">
+      <li class="bg-mono-900 p-2.5 border border-mono-800">
+        <strong class="text-white block uppercase mb-1">1. Formato de Papel:</strong>
+        Selecione <strong>A4</strong>. O documento foi proporcionalmente formatado para caber em A4 sem quebras de linha indesejadas.
+      </li>
+      <li class="bg-mono-900 p-2.5 border border-mono-800">
+        <strong class="text-white block uppercase mb-1">2. Gráficos de Fundo:</strong>
+        Marque a caixa <strong>"Gráficos de segundo plano"</strong> (ou <i>Background graphics</i>) para imprimir cartões e contrastes pretos.
+      </li>
+      <li class="bg-mono-900 p-2.5 border border-mono-800">
+        <strong class="text-white block uppercase mb-1">3. Margens e Escala:</strong>
+        Configure Margens como <strong>"Padrão"</strong> ou <strong>"Nenhuma"</strong> e Mantenha a Escala em <strong>100%</strong>.
+      </li>
+    </ul>
+  </div>
+</header>
+
+<div class="max-w-5xl mx-auto px-4 py-2">
+
+  <!-- ================= PÁGINA 1: CAPA OFICIAL P&B ================= -->
+  <section class="page-sheet flex flex-col justify-between">
+    <div>
+      <!-- Cabecalho da Capa -->
+      <div class="flex justify-between items-start border-b border-mono-200 pb-6 mb-12 border-print">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 border border-mono-950 flex items-center justify-center font-mono font-bold text-sm tracking-wider bg-mono-950 text-white">
+            FIFA
+          </div>
+          <div>
+            <span class="font-mono text-[10px] tracking-widest text-mono-500 uppercase block">Documentação e Diretrizes de Licenciamento</span>
+            <span class="font-display font-bold text-xs uppercase text-mono-950 tracking-widest">Football Agent Regulations (FFAR) & RSTP</span>
+          </div>
+        </div>
+        <div class="text-right">
+          <span class="inline-block font-mono text-[9px] uppercase tracking-widest px-2.5 py-1 border border-mono-300 text-mono-700 badge-print">
+            Edição Especial Famílias 2026
+          </span>
+        </div>
+      </div>
+
+      <!-- Título Principal -->
+      <div class="my-12">
+        <div class="font-mono text-xs uppercase tracking-widest text-mono-500 mb-3 flex items-center gap-2">
+          <span class="w-6 h-px bg-mono-950"></span> Manual Prático de Educação de Pais e Atletas
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl font-bold tracking-tight text-mono-950 uppercase leading-[1.1] mb-6">
+          Guia FIFA de Relacionamento com Agentes de Futebol
+        </h1>
+        <p class="font-sans text-mono-600 text-sm max-w-2xl leading-relaxed">
+          Manual indispensável de capacitação jurídica, proteção de menores e gestão estratégica da carreira esportiva. Elaborado para famílias que vivenciam a transição para o <strong>Novo Futebol</strong>.
+        </p>
+
+        <!-- NOTA INICIAL DE AUTORIA E ORIENTAÇÕES -->
+        <div class="mt-6 p-4 border border-mono-950 bg-mono-50 text-xs text-mono-800 leading-relaxed font-sans border-print">
+          <p class="font-mono font-bold text-mono-950 uppercase mb-1">Nota de Apresentação e Orientação Familiar</p>
+          <p>
+            Este documento é um <strong>resumo prático, tradução adaptada e análise crítica elaborada por Francis Klock (Base de Campeão)</strong> sobre as diretrizes oficiais da FIFA. Nosso objetivo é simplificar as regras e entregar orientações estratégicas diretas para os pais. Disponibilizamos também o link de acesso ao guia completo e original publicado pela FIFA.
+          </p>
+        </div>
+      </div>
+
+      <!-- Grid de Destaques da Capa -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-8">
+        <div class="mono-card">
+          <span class="font-mono text-[10px] text-mono-500 uppercase tracking-widest block mb-1">Unidade I</span>
+          <h3 class="font-display text-xs font-bold uppercase text-mono-950 mb-2">Licenciamento & Verificação</h3>
+          <p class="text-[11px] text-mono-600 leading-snug">Regra de validação de QR Code, verificação da licença FIFA e autorização para representar menores.</p>
+        </div>
+        <div class="mono-card">
+          <span class="font-mono text-[10px] text-mono-500 uppercase tracking-widest block mb-1">Unidade II & III</span>
+          <h3 class="font-display text-xs font-bold uppercase text-mono-950 mb-2">Contratos, Trials & Custos</h3>
+          <p class="text-[11px] text-mono-600 leading-snug">Teto de 2 anos de representação, proibição de incentivos (*inducements*) e regras de testes e transferências.</p>
+        </div>
+        <div class="mono-card">
+          <span class="font-mono text-[10px] text-mono-500 uppercase tracking-widest block mb-1">Unidade IV & Manifesto</span>
+          <h3 class="font-display text-xs font-bold uppercase text-mono-950 mb-2">Rescisão & O Novo Futebol</h3>
+          <p class="text-[11px] text-mono-600 leading-snug">Justa causa, prevenção ao tráfico de atletas e o modelo de mentoria e acompanhamento por Francis Klock.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé da Capa -->
+    <div class="border-t border-mono-200 pt-6 mt-12 flex flex-wrap justify-between items-end gap-4 border-print">
+      <div>
+        <p class="font-mono text-[10px] uppercase tracking-widest text-mono-500">Publicação e Capacitação Exclusiva</p>
+        <p class="font-display font-bold text-sm text-mono-950 uppercase tracking-wider">Francis Klock · Mentoria e Orientação Familiar</p>
+      </div>
+      <div class="text-right">
+        <p class="font-mono text-[10px] text-mono-500 uppercase">Plataforma Oficial</p>
+        <p class="font-mono text-xs font-bold text-mono-950">francisklock.com.br</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 2: ESTRUTURA DOS 4 ESTÁGIOS & UNCRC ================= -->
+  <section class="page-sheet">
+    <div class="border-b border-mono-200 pb-4 mb-8 flex justify-between items-center border-print">
+      <span class="font-mono text-xs text-mono-500 uppercase tracking-widest">Página 02 — Estrutura e Direitos Universais</span>
+      <span class="font-mono text-xs text-mono-950 uppercase font-bold">Guia FIFA de Agentes</span>
+    </div>
+
+    <!-- Seção 1: Visão Geral dos 4 Estágios -->
+    <div class="mb-10">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>01.0</span> / O Ciclo Completo do Relacionamento Família-Agente
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-4">
+        As 4 Fases de Engajamento com Agentes de Futebol
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="mono-card">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono text-[10px] bg-black text-white font-bold px-2 py-0.5 uppercase">Estágio 1</span>
+            <span class="font-mono text-[10px] text-mono-500">Pré-Contato</span>
+          </div>
+          <h3 class="font-display text-sm font-bold text-mono-950 mb-1 uppercase">Preparação e Diagnóstico</h3>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            Compreender a regulamentação, verificar a licença ativa na FIFA, validar o QR Code do agente e reconhecer táticas de falsos intermediários antes de qualquer conversa.
+          </p>
+        </div>
+
+        <div class="mono-card">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono text-[10px] bg-black text-white font-bold px-2 py-0.5 uppercase">Estágio 2</span>
+            <span class="font-mono text-[10px] text-mono-500">Formalização</span>
+          </div>
+          <h3 class="font-display text-sm font-bold text-mono-950 mb-1 uppercase">Assinatura do Contrato de Representação</h3>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            Exame rigoroso das cláusulas do *Representation Agreement*, respeitando o limite legal de 2 anos, proibição de renovação automática e rejeição de ofertas de dinheiro por fora (*inducements*).
+          </p>
+        </div>
+
+        <div class="mono-card">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono text-[10px] bg-black text-white font-bold px-2 py-0.5 uppercase">Estágio 3</span>
+            <span class="font-mono text-[10px] text-mono-500">Atuação Ativa</span>
+          </div>
+          <h3 class="font-display text-sm font-bold text-mono-950 mb-1 uppercase">Relacionamento, Testes e Contratos</h3>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            Supervisão contínua de avaliações (*trials*), transferências internacionais (Artigo 19 RSTP), celebração do primeiro contrato profissional e regramento de pagamentos (*service fees*).
+          </p>
+        </div>
+
+        <div class="mono-card">
+          <div class="flex justify-between items-center mb-2">
+            <span class="font-mono text-[10px] bg-black text-white font-bold px-2 py-0.5 uppercase">Estágio 4</span>
+            <span class="font-mono text-[10px] text-mono-500">Encerramento</span>
+          </div>
+          <h3 class="font-display text-sm font-bold text-mono-950 mb-1 uppercase">Término, Rescisão e Transição</h3>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            Término natural por vencimento, rescisão amigável, rescisão unilateral por justa causa e diretrizes de mudança segura de agente (*switching*).
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção 2: Fundamentação nos Direitos da Criança (UNCRC) -->
+    <div>
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>01.1</span> / Convenção das Nações Unidas (UNCRC)
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        Os Pais como Garantidores Primários de Direitos
+      </h2>
+      <p class="text-xs text-mono-600 leading-relaxed mb-4">
+        Conforme ratificado pela FIFA e pela ONU, a proteção ao jovem atleta baseia-se em três pilares fundamentais da Convenção sobre os Direitos da Criança:
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <span class="font-mono text-xs font-bold text-mono-950 block mb-1 uppercase">1. Provisão</span>
+          <p class="text-[11px] text-mono-600">Direito à educação formal contínua, saúde física e mental, moradia adequada e desenvolvimento moral antes do esporte.</p>
+        </div>
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <span class="font-mono text-xs font-bold text-mono-950 block mb-1 uppercase">2. Participação</span>
+          <p class="text-[11px] text-mono-600">O direito do jovem atleta de ser ouvido e ter sua opinião levada em consideração em todas as decisões da carreira.</p>
+        </div>
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <span class="font-mono text-xs font-bold text-mono-950 block mb-1 uppercase">3. Proteção</span>
+          <p class="text-[11px] text-mono-600">Blindagem total contra abusos, má-fé contratual, negligência educacional e exploração financeira por terceiros.</p>
+        </div>
+      </div>
+
+      <div class="mono-alert border-print">
+        <h4 class="font-mono text-xs font-bold text-mono-950 uppercase mb-1">Alerta Estatístico Inegociável da FIFA</h4>
+        <p class="text-xs text-mono-700 leading-relaxed">
+          Estatisticamente, <strong>menos de 1% dos atletas que ingressam na base chegam ao futebol profissional de alto rendimento</strong>. E para aqueles que chegam, a carreira ativa dura em média apenas de 8 a 10 anos. A preservação do estudo formal e a formação profissional alternativa são <strong>compromissos morais e legais inalienáveis dos pais</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 3: REGULAMENTAÇÃO & VERIFICAÇÃO DE AGENTES ================= -->
+  <section class="page-sheet">
+    <div class="border-b border-mono-200 pb-4 mb-8 flex justify-between items-center border-print">
+      <span class="font-mono text-xs text-mono-500 uppercase tracking-widest">Página 03 — Unidade 1: Licenciamento FIFA</span>
+      <span class="font-mono text-xs text-mono-950 uppercase font-bold">Guia FIFA de Agentes</span>
+    </div>
+
+    <!-- Regra dos 6 Meses -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>02.1</span> / Artigo 13 do FFAR (Football Agent Regulations)
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        A Regra Estrita de Abordagem a Menores (A Janela dos 6 Meses)
+      </h2>
+      <div class="mono-card mb-4">
+        <p class="text-xs text-mono-700 leading-relaxed font-sans mb-3">
+          Segundo o <strong>Artigo 13, Parágrafo 1 do FFAR</strong>, um agente de futebol está expressamente proibido de abordar um atleta menor de idade ou sua família, ou assinar qualquer contrato de representação, até <strong>no máximo 6 meses antes</strong> de o jovem atingir a idade legal para assinar seu primeiro contrato de trabalho profissional no país onde jogará.
+        </p>
+        <div class="p-3 bg-mono-950 text-white text-[11px] font-mono border border-mono-800 border-print">
+          Qualquer abordagem feita por um agente antes dessa janela exata de 6 meses é uma INFRAÇÃO REGULATÓRIA GRAVE, que deve ser denunciada imediatamente à FIFA e à federação local.
+        </div>
+      </div>
+    </div>
+
+    <!-- O Licenciamento e a Autorizacao para Menores -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>02.2</span> / Requisitos de Habilitação do Profissional
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        A Licença Digital FIFA e a Habilitação "Representing Minors"
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="border border-mono-200 p-4 bg-mono-50 border-print">
+          <span class="font-mono text-xs font-bold text-mono-950 uppercase block mb-2 border-b border-mono-200 pb-1">1. Licença Estritamente Pessoal</span>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            A licença da FIFA é concedida unicamente a <strong>pessoas físicas (indivíduos)</strong>. Não existem agências licenciadas; apenas profissionais individuais que possuem licença pessoal e podem atuar em empresas.
+          </p>
+        </div>
+
+        <div class="border border-mono-200 p-4 bg-mono-50 border-print">
+          <span class="font-mono text-xs font-bold text-mono-950 uppercase block mb-2 border-b border-mono-200 pb-1">2. Especialização Obrigatória para Menores</span>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            Possuir a licença geral da FIFA <strong>não autoriza o agente a trabalhar com menores de 18 anos</strong>. Ele deve concluir o curso e exame específico de proteção ao menor, renovado a cada 3 anos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Guia Passo a Passo de Verificacao em 5 Etapas -->
+    <div>
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>02.3</span> / Protocolo de Segurança do Atleta
+      </div>
+      <h3 class="font-display text-sm font-bold text-mono-950 uppercase mb-3">
+        Passo a Passo para Validar o Agente no Sistema FIFA
+      </h3>
+
+      <div class="space-y-2 text-xs font-mono">
+        <div class="flex items-start gap-3 p-2.5 border border-mono-200 bg-mono-50 border-print">
+          <span class="w-6 h-6 bg-mono-950 text-white font-bold flex items-center justify-center text-xs shrink-0">1</span>
+          <div>
+            <strong class="text-mono-950 block uppercase">Solicitar o Cartão Digital FIFA (*Digital License Card*)</strong>
+            Exija a apresentação do cartão digital oficial do agente antes de iniciar qualquer conversa sobre o atleta.
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-2.5 border border-mono-200 bg-mono-50 border-print">
+          <span class="w-6 h-6 bg-mono-950 text-white font-bold flex items-center justify-center text-xs shrink-0">2</span>
+          <div>
+            <strong class="text-mono-950 block uppercase">Escanear o QR Code em Tempo Real</strong>
+            Utilize a câmera do celular para ler o QR Code do cartão. Ele deve redirecionar diretamente para o domínio oficial `fifa.com`.
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-2.5 border border-mono-200 bg-mono-50 border-print">
+          <span class="w-6 h-6 bg-mono-950 text-white font-bold flex items-center justify-center text-xs shrink-0">3</span>
+          <div>
+            <strong class="text-mono-950 block uppercase">Conferir o Status "VALID" ou "ACTIVE"</strong>
+            Confirme se a licença do agente está ativa e se o nome do documento pessoal corresponde exatamente ao nome cadastrado.
+          </div>
+        </div>
+
+        <div class="flex items-start gap-3 p-2.5 border border-mono-200 bg-mono-50 border-print">
+          <span class="w-6 h-6 bg-mono-950 text-white font-bold flex items-center justify-center text-xs shrink-0">4</span>
+          <div>
+            <strong class="text-mono-950 block uppercase">Verificar o Campo "Authorized to Represent Minors"</strong>
+            Se o atleta tiver menos de 18 anos, este campo precisa obrigatoriamente constar como <strong>YES</strong>.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 4: CONTRATO DE REPRESENTAÇÃO & ALERTAS ANTI-FRAUDE ================= -->
+  <section class="page-sheet">
+    <div class="border-b border-mono-200 pb-4 mb-8 flex justify-between items-center border-print">
+      <span class="font-mono text-xs text-mono-500 uppercase tracking-widest">Página 04 — Unidade 2: Contratos e Proteção</span>
+      <span class="font-mono text-xs text-mono-950 uppercase font-bold">Guia FIFA de Agentes</span>
+    </div>
+
+    <!-- Regras do Contrato de Representacao -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>03.1</span> / Regulamentação do Representation Agreement
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        Cláusulas Obrigatórias e Limites Legais do Contrato
+      </h2>
+
+      <div class="mono-card space-y-3 text-xs text-mono-700 mb-4">
+        <div class="border-b border-mono-200 pb-2">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">Duração Máxima Inegociável: 2 Anos (24 Meses)</strong>
+          Nenhum contrato de representação com jogador pode ter duração superior a 2 anos. Cláusulas de <strong>renovação automática são nulas e de nenhum efeito legal</strong> segundo a FIFA.
+        </div>
+        <div class="border-b border-mono-200 pb-2">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">Assinatura Obrigatória dos Pais/Responsáveis Legais</strong>
+          Qualquer contrato assinado por um menor sem a co-assinatura explícita de seu responsável legal é totalmente inválido e sem efeito.
+        </div>
+        <div class="border-b border-mono-200 pb-2">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">Notificação para Consultar Advogado Independente</strong>
+          O agente é obrigado por lei a notificar por escrito a família sobre o direito de buscar orientação jurídica independente com um advogado desportivo antes de assinar.
+        </div>
+        <div>
+          <strong class="text-mono-950 font-mono uppercase block mb-1">Exclusividade e Janela de Transição (Switching)</strong>
+          O atleta só pode ter um contrato vigente. Novos agentes só podem fazer abordagens nos <strong>últimos 2 meses de vigência</strong> do contrato atual.
+        </div>
+      </div>
+    </div>
+
+    <!-- Proibição Abrangente de Incentivos (Inducements) -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>03.2</span> / Integridade e Ética Financeira
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        Proibição Absoluta de Incentivos (*Inducements*)
+      </h2>
+
+      <div class="mono-alert border-print mb-4">
+        <p class="text-xs text-mono-800 leading-relaxed">
+          Constitui infração ética gravíssima a oferta ou recebimento de qualquer tipo de incentivo patrimonial ou benefício direto — tais como <strong>dinheiro vivo, automóveis, pagamento de aluguel por fora, presentes de luxo, viagens de lazer ou promessas financeiras a familiares</strong> — para forçar a contratação de um agente.
+        </p>
+      </div>
+    </div>
+
+    <!-- Identificacao de Falsos Agentes e Golpes -->
+    <div>
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>03.3</span> / Gestão de Riscos e Segurança
+      </div>
+      <h3 class="font-display text-sm font-bold text-mono-950 uppercase mb-3">
+        Como Identificar e Neutralizar Falsos Agentes
+      </h3>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">Cobrança de Taxas Adiantadas</strong>
+          Falsos agentes solicitam dinheiro sob o pretexto de bancar testes, passagens, hospedagem ou taxas de emissão de vistos. Agentes legítimos e clubes formais jamais cobram valores da família para avaliações.
+        </div>
+
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">Pressão por Decisões Imediatas</strong>
+          Alertas de urgência ("é pegar ou largar") são usados para impedir que os pais consultem advogados ou verifiquem a licença no portal oficial da FIFA.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 5: AVALIAÇÕES (TRIALS), TRANSFERÊNCIAS & CONTRATOS ================= -->
+  <section class="page-sheet">
+    <div class="border-b border-mono-200 pb-4 mb-8 flex justify-between items-center border-print">
+      <span class="font-mono text-xs text-mono-500 uppercase tracking-widest">Página 05 — Unidade 3: Operações no Futebol</span>
+      <span class="font-mono text-xs text-mono-950 uppercase font-bold">Guia FIFA de Agentes</span>
+    </div>
+
+    <!-- Regras para Avaliações e Testes (Trials) -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>04.1</span> / Período de Avaliação em Clubes (RSTP)
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        Regras Obrigatórias para Testes e Avaliações (*Trials*)
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+        <div class="mono-card">
+          <h3 class="font-mono text-xs font-bold text-mono-950 uppercase border-b border-mono-200 pb-1 mb-2">Custos Integralmente Cobertos</h3>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            O clube interessado é obrigado a cobrir todas as despesas de transporte, alojamento, alimentação e despesas diárias. Todos os termos devem estar formalizados no formulário oficial <strong>FIFA Trial Form</strong>.
+          </p>
+        </div>
+
+        <div class="mono-card">
+          <h3 class="font-mono text-xs font-bold text-mono-950 uppercase border-b border-mono-200 pb-1 mb-2">Limites de Frequência e Duração</h3>
+          <p class="text-xs text-mono-600 leading-relaxed">
+            Atletas menores de idade só podem realizar no máximo <strong>2 testes por ano civil</strong>, com duração máxima de até 8 semanas por clube. É proibido participar de partidas oficiais durante períodos de teste.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Transferências Internacionais e o Artigo 19 do RSTP -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>04.2</span> / Regulamento de Status e Transferência de Jogadores
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        Transferências Internacionais de Menores (Artigo 19 RSTP)
+      </h2>
+
+      <p class="text-xs text-mono-600 leading-relaxed mb-3">
+        A regra geral da FIFA é a <strong>proibição de transferências internacionais para jogadores com menos de 18 anos</strong>. As únicas exceções legais permitidas mediante rigorosa aprovação prévia do comitê da FIFA são:
+      </p>
+
+      <div class="space-y-2 text-xs font-mono">
+        <div class="p-2 border border-mono-200 bg-mono-50 border-print">
+          <strong class="text-mono-950">1. Mudança Familiar Não Esportiva:</strong> Os pais do atleta se mudam para o novo país por razões de trabalho totalmente alheias ao futebol.
+        </div>
+        <div class="p-2 border border-mono-200 bg-mono-50 border-print">
+          <strong class="text-mono-950">2. União Europeia / EEE (16 a 18 anos):</strong> Transferências dentro do bloco europeu para jovens entre 16 e 18 anos, garantindo moradia, tutor e formação acadêmica.
+        </div>
+        <div class="p-2 border border-mono-200 bg-mono-50 border-print">
+          <strong class="text-mono-950">3. Fronteiras Territoriais (50km):</strong> Atleta reside a até 50km da fronteira e o clube fica a no máximo 50km da mesma fronteira (distância total máxima de 100km).
+        </div>
+      </div>
+    </div>
+
+    <!-- Remuneração do Agente (Service Fees) -->
+    <div>
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>04.3</span> / Remuneração do Profissional
+      </div>
+      <h3 class="font-display text-sm font-bold text-mono-950 uppercase mb-2">
+        Regras de Pagamento de Taxas (*Service Fees*)
+      </h3>
+
+      <div class="mono-card text-xs text-mono-600 space-y-2">
+        <p>
+          <strong class="text-mono-950 font-mono uppercase">Isenção para Menores:</strong> Um agente <strong>não pode receber comissão ou taxa de serviço por serviços prestados a um atleta menor</strong>, exceto quando o jovem está assinando seu primeiro contrato profissional (ou contratos profissionais subsequentes), respeitando a lei local.
+        </p>
+        <p>
+          <strong class="text-mono-950 font-mono uppercase">Faturamento Formal:</strong> Todos os pagamentos devem ser realizados via fatura oficial (*invoice*) diretamente ao agente licenciado, sendo proibida a triangulação financeira para terceiros.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 6: RESCISÃO, TRÁFICO & CHECKLIST DOS PAIS ================= -->
+  <section class="page-sheet">
+    <div class="border-b border-mono-200 pb-4 mb-8 flex justify-between items-center border-print">
+      <span class="font-mono text-xs text-mono-500 uppercase tracking-widest">Página 06 — Unidade 4 & Checklist Prático</span>
+      <span class="font-mono text-xs text-mono-950 uppercase font-bold">Guia FIFA de Agentes</span>
+    </div>
+
+    <!-- Rescisão e Justa Causa -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>05.1</span> / Término do Relacionamento Contratual
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-3">
+        Rescisão Contratual e Mudança de Agente (*Switching*)
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs mb-4">
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">Término Natural</strong>
+          O contrato vence ao atingir 2 anos de prazo sem necessidade de rescisão. A renovação exige a assinatura de um documento totalmente novo.
+        </div>
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">DISTRATO MÚTUO</strong>
+          Ambas as partes assinam documento amigável encerrando a relação e quitando obrigações futuras de taxas.
+        </div>
+        <div class="border border-mono-200 p-3 bg-mono-50 border-print">
+          <strong class="text-mono-950 font-mono uppercase block mb-1">JUSTA CAUSA (Art. 12)</strong>
+          Rescisão imediata sem penalidade em caso de suspensão/perda da licença FIFA do agente ou violação grave das obrigações legais.
+        </div>
+      </div>
+    </div>
+
+    <!-- Combate ao Tráfico de Atletas -->
+    <div class="mb-8">
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>05.2</span> / Proteção Internacional e Direitos Humanos
+      </div>
+      <h2 class="font-display text-xl font-bold text-mono-950 uppercase tracking-tight mb-2">
+        Combate ao Tráfico de Atletas no Futebol
+      </h2>
+      <p class="text-xs text-mono-600 leading-relaxed mb-3">
+        Redes fraudulentas exploram o sonho de jovens promessas oferecendo testes ilusórios no exterior. Para a caracterização do tráfico de menores segundo o Protocolo de Palermo da ONU, <strong>a mera ação de recrutamento com finalidade de exploração já constitui crime</strong>, independentemente do consentimento dos pais.
+      </p>
+    </div>
+
+    <!-- Tabela do Checklist Definitivo dos Pais -->
+    <div>
+      <div class="font-mono text-xs text-mono-500 uppercase tracking-widest mb-2 flex items-center gap-2">
+        <span>05.3</span> / Auditoria Familiar de Segurança
+      </div>
+      <h3 class="font-display text-sm font-bold text-mono-950 uppercase mb-3">
+        Checklist de Conformidade Obrigatória para Pais e Mães
+      </h3>
+
+      <table class="w-full checklist-table mb-4">
+        <thead>
+          <tr>
+            <th class="w-16 text-center">OK</th>
+            <th>Item de Verificação Obrigatória</th>
+            <th class="w-28 text-center">Referência</th>
+          </tr>
+        </thead>
+        <tbody class="text-mono-800">
+          <tr>
+            <td class="text-center font-mono font-bold whitespace-nowrap">[ &nbsp; ]</td>
+            <td><strong>Licença FIFA Ativa:</strong> Verificada com sucesso via leitura de QR Code no site oficial da FIFA.</td>
+            <td class="text-center font-mono text-[10px] text-mono-500">FFAR Art. 4</td>
+          </tr>
+          <tr>
+            <td class="text-center font-mono font-bold whitespace-nowrap">[ &nbsp; ]</td>
+            <td><strong>Habilitação para Menores:</strong> Campo "Authorized to represent minors" confirmado como YES.</td>
+            <td class="text-center font-mono text-[10px] text-mono-500">FFAR Art. 13</td>
+          </tr>
+          <tr>
+            <td class="text-center font-mono font-bold whitespace-nowrap">[ &nbsp; ]</td>
+            <td><strong>Regra dos 6 Meses:</strong> Abordagem realizada dentro da janela legal que antecede a idade do 1º contrato profissional.</td>
+            <td class="text-center font-mono text-[10px] text-mono-500">FFAR Art. 12</td>
+          </tr>
+          <tr>
+            <td class="text-center font-mono font-bold whitespace-nowrap">[ &nbsp; ]</td>
+            <td><strong>Rejeição de Incentivos:</strong> Nenhum valor financeiro, presente de luxo ou vantagem por fora aceita pela família.</td>
+            <td class="text-center font-mono text-[10px] text-mono-500">FFAR Art. 17</td>
+          </tr>
+          <tr>
+            <td class="text-center font-mono font-bold whitespace-nowrap">[ &nbsp; ]</td>
+            <td><strong>Prazo do Contrato:</strong> Fixado em no máximo 24 meses, sem cláusula de renovação automática.</td>
+            <td class="text-center font-mono text-[10px] text-mono-500">FFAR Art. 12</td>
+          </tr>
+          <tr>
+            <td class="text-center font-mono font-bold whitespace-nowrap">[ &nbsp; ]</td>
+            <td><strong>Análise Jurídica Independente:</strong> Contrato submetido à revisão de um advogado especializado em direito desportivo.</td>
+            <td class="text-center font-mono text-[10px] text-mono-500">UNCRC Protect</td>
+          </tr>
+          <tr>
+            <td class="text-center font-mono font-bold whitespace-nowrap">[ &nbsp; ]</td>
+            <td><strong>Preservação do Estudo:</strong> Garantia contratual e prática da continuidade da formação escolar do atleta.</td>
+            <td class="text-center font-mono text-[10px] text-mono-500">UNCRC Provision</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ================= PÁGINA 7: MANIFESTO DO NOVO FUTEBOL & FRANCIS KLOCK / BASE DE CAMPEÃO ================= -->
+  <section class="page-sheet flex flex-col justify-between border-mono-300">
+    <div>
+      <!-- Topo da Pagina do Manifesto -->
+      <div class="flex justify-between items-center border-b border-mono-200 pb-4 mb-8 border-print">
+        <div class="flex items-center gap-2">
+          <div class="w-6 h-6 bg-mono-950 text-white font-mono font-bold text-xs flex items-center justify-center">BK</div>
+          <span class="font-display font-bold text-xs uppercase tracking-widest text-mono-950">FRANCIS KLOCK · BASE DE CAMPEÃO</span>
+        </div>
+        <span class="font-mono text-[10px] text-mono-500 uppercase tracking-widest">Manifesto do Novo Futebol</span>
+      </div>
+
+      <!-- Titulo e Introducao -->
+      <div class="mb-8">
+        <span class="font-mono text-xs uppercase tracking-widest text-mono-500 block mb-2">Visão de Futuro e Mentoria de Carreira</span>
+        <h2 class="font-display text-3xl font-bold uppercase tracking-tight text-mono-950 mb-4">
+          Estamos Vivendo o Novo Futebol
+        </h2>
+        <p class="text-xs text-mono-600 leading-relaxed font-sans max-w-2xl">
+          O futebol amador, pautado em promessas informais, falta de transparência e exploração da boa-fé das famílias, ficou no passado. O <strong>Novo Futebol</strong> exige profissionalismo, conhecimento regulatório, preparo mental, governança e mentalidade de alto rendimento dentro e fora de campo.
+        </p>
+      </div>
+
+      <!-- Tabela Comparativa: Futebol Tradicional vs. O Novo Futebol -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+        <div class="border border-mono-200 p-4 bg-mono-50 border-print">
+          <div class="flex items-center gap-2 mb-3 pb-2 border-b border-mono-200">
+            <span class="w-2 h-2 bg-mono-400 rounded-full"></span>
+            <h3 class="font-mono text-xs font-bold text-mono-500 uppercase">O Futebol Tradicional (Ultrapassado)</h3>
+          </div>
+          <ul class="space-y-2 text-[11px] text-mono-600 font-sans">
+            <li class="flex items-start gap-2"><span>—</span> Promessas informais e ausência de contratos transparentes.</li>
+            <li class="flex items-start gap-2"><span>—</span> Pais leigos e reféns da boa vontade de intermediários.</li>
+            <li class="flex items-start gap-2"><span>—</span> Abandono do estudo em troca de ilusões esportivas precoce.</li>
+            <li class="flex items-start gap-2"><span>—</span> Foco exclusivo no talento com a bola, sem inteligência emocional.</li>
+          </ul>
+        </div>
+
+        <div class="border border-mono-950 p-4 bg-mono-950 text-white border-print">
+          <div class="flex items-center gap-2 mb-3 pb-2 border-b border-mono-800">
+            <span class="w-2 h-2 bg-white rounded-full"></span>
+            <h3 class="font-mono text-xs font-bold text-white uppercase">O Novo Futebol (Profissional)</h3>
+          </div>
+          <ul class="space-y-2 text-[11px] text-mono-200 font-sans">
+            <li class="flex items-start gap-2"><span class="text-white">✓</span> Agentes obrigatoriamente licenciados e regulados pela FIFA.</li>
+            <li class="flex items-start gap-2"><span class="text-white">✓</span> Famílias capacitadas, instruídas e ativas nas decisões estratégicas.</li>
+            <li class="flex items-start gap-2"><span class="text-white">✓</span> Formação acadêmica e profissional como pilar inegociável do jovem.</li>
+            <li class="flex items-start gap-2"><span class="text-white">✓</span> Atleta de alta performance com inteligência tática, física e mental.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bio / Perfil de Francis Klock com Foto Real -->
+      <div class="border border-mono-200 p-5 bg-mono-50 mb-8 border-print">
+        <div class="flex flex-col md:flex-row items-center gap-6">
+          <img src="https://scontent-poa1-1.cdninstagram.com/v/t51.82787-19/626549890_18550724179021671_6489709168740389508_n.jpg?_nc_cat=110&ig_cache_key=GIJkWCVnTwQNyedBAITSXeIaFBBabmNDAQAB0j-ccb7-5&ccb=7-5&_nc_sid=669407&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=moVwrjGfNr4Q7kNvwGC7Fc-&_nc_oc=AdpUKbVlGsE7b8zWRuL7xVTOrcR_WYQ2CFkee3jSfUY3egsa9kvrXZioi7i8Yycjpjt-jMdacfH4Tj3zYvqR3pCK&_nc_zt=24&_nc_ht=scontent-poa1-1.cdninstagram.com&_nc_gid=fcI9D7LU4lG9CTwdVdsOyw&_nc_ss=7b6a8&oh=00_AQQkEbcqNzNjezLe7jLB4OuizjROM73uIDhOZh_pAQ1QvA&oe=6AE7D30E" onerror="this.onerror=null; this.src='https://placehold.co/150x150/18181b/ffffff?text=Francis+Klock';" alt="Francis Klock" class="w-28 h-28 border border-mono-950 object-cover grayscale shrink-0 border-print shadow-sm">
+          <div class="space-y-2">
+            <h3 class="font-display text-base font-bold text-mono-950 uppercase">O Meu Trabalho: Preparar o Atleta e a Família</h3>
+            <p class="text-xs text-mono-600 leading-relaxed font-sans">
+              No projeto <strong>Base de Campeão</strong>, atuo diretamente na orientação de pais e jovens promessas para que não sejam enganados por más práticas. Nós estruturamos o <strong>Plano de Desenvolvimento Individual (PDI Ciclo)</strong>, a mentoria de comportamento, a preparação mental e a governança jurídica para garantir que o atleta chegue ao topo com estrutura sólida.
+            </p>
+            <p class="font-mono text-[11px] italic text-mono-800 border-l-2 border-mono-950 pl-3 py-1">
+              "A nossa missão é garantir que o talento do seu filho seja protegido com conhecimento, caráter e estratégia de alto nível." — Francis Klock
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call To Action e Contato Final -->
+    <div class="border-t border-mono-200 pt-6 mt-6 border-print">
+      <div class="text-center space-y-4">
+        <div>
+          <h4 class="font-display font-bold text-base text-mono-950 uppercase tracking-wider">
+            Não Enfrente o Mercado Sem Orientação Especializada
+          </h4>
+          <p class="text-xs text-mono-500 font-sans mt-1">
+            Agende uma sessão de diagnóstico e mentoria familiar para blindar a carreira do seu filho no Novo Futebol.
+          </p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-3 no-print">
+          <a href="https://inside.fifa.com/transfer-system/agents/education/fifa-parent-education-on-football-agents" target="_blank" class="w-full sm:w-auto bg-mono-950 hover:bg-mono-800 text-white font-mono text-xs font-bold px-5 py-3 transition uppercase tracking-wider text-center border border-mono-950 flex items-center justify-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+            Acessar o Guia Completo da FIFA
+          </a>
+          <a href="https://francisklock.com.br/" target="_blank" class="w-full sm:w-auto border border-mono-300 hover:border-mono-950 text-mono-950 font-mono text-xs font-bold px-5 py-3 transition uppercase tracking-wider text-center bg-white">
+            Acessar Site Oficial
+          </a>
+          <a href="https://wa.me/5551998800521" target="_blank" class="w-full sm:w-auto border border-mono-300 hover:border-mono-950 text-mono-950 font-mono text-xs font-bold px-5 py-3 transition uppercase tracking-wider text-center bg-white">
+            Falar no WhatsApp
+          </a>
+        </div>
+
+        <div class="pt-4 font-mono text-[10px] text-mono-400 uppercase tracking-widest flex flex-wrap justify-between items-center gap-2 border-t border-mono-200 border-print">
+          <span>Francis Klock · Base de Campeão © 2026</span>
+          <span>francisklock.com.br</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>

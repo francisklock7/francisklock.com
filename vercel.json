@@ -1,0 +1,7 @@
+{
+  "headers": [
+    { "source": "/guia-agentes-obrigado(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
+    { "source": "/guia-agentes-online(.*)", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] },
+    { "source": "/guia-fifa-agentes-pais.pdf", "headers": [{ "key": "X-Robots-Tag", "value": "noindex, nofollow" }] }
+  ]
+}

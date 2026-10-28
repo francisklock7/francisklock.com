@@ -1,0 +1,32 @@
+SITE FRANCISKLOCK.COM.BR  |  ATUALIZACAO OUT/2026
+
+O QUE TEM AQUI
+Todos os arquivos do site, prontos para subir na raiz do projeto no Vercel.
+
+Novos:
+  guia-agentes.html             pagina de captacao (Formspree)
+  guia-agentes-obrigado.html    acesso liberado (PDF e leitura online)
+  guia-agentes-online.html      o guia em HTML (noindex)
+  artigo-agentes-de-futebol.html   artigo 003, pagina propria para compartilhar no LinkedIn
+  og-artigo-3.jpg, og-guia-agentes.jpg   imagens de compartilhamento
+  vercel.json                   impede o Google de indexar o guia e o PDF
+
+Atualizados:
+  artigos.html                  artigo 003 no topo da lista
+  sitemap.xml                   captacao e artigo 003 incluidos
+
+ANTES DE SUBIR
+1. Abra guia-agentes-online.html no computador, use o botao de exportar PDF
+   e salve com o nome exato: guia-fifa-agentes-pais.pdf
+   Coloque esse PDF nesta mesma pasta.
+2. Se o projeto no Vercel ja tiver um vercel.json, junte o bloco "headers".
+
+DEPOIS DE SUBIR
+3. Faca um cadastro de teste em francisklock.com.br/guia-agentes.html
+4. No primeiro envio o Formspree pede para confirmar o e-mail da conta. Confirme.
+5. Envie o novo sitemap no Google Search Console.
+
+LINKS COM ORIGEM (para saber de onde vem cada lead)
+Bio do Instagram:  francisklock.com.br/guia-agentes.html?utm_source=instagram&utm_medium=bio
+Stories:           francisklock.com.br/guia-agentes.html?utm_source=instagram&utm_medium=stories
+LinkedIn:          francisklock.com.br/guia-agentes.html?utm_source=linkedin&utm_medium=post
