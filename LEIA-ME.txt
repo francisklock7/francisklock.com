@@ -7,6 +7,7 @@ Novos:
   guia-agentes.html             pagina de captacao (Formspree)
   guia-agentes-obrigado.html    acesso liberado (PDF e leitura online)
   guia-agentes-online.html      o guia em HTML (noindex)
+  guia-fifa-agentes-pais.pdf    o guia em PDF, A4, 7 paginas
   artigo-agentes-de-futebol.html   artigo 003, pagina propria para compartilhar no LinkedIn
   og-artigo-3.jpg, og-guia-agentes.jpg   imagens de compartilhamento
   vercel.json                   impede o Google de indexar o guia e o PDF
@@ -16,9 +17,8 @@ Atualizados:
   sitemap.xml                   captacao e artigo 003 incluidos
 
 ANTES DE SUBIR
-1. Abra guia-agentes-online.html no computador, use o botao de exportar PDF
-   e salve com o nome exato: guia-fifa-agentes-pais.pdf
-   Coloque esse PDF nesta mesma pasta.
+1. O PDF (guia-fifa-agentes-pais.pdf) ja esta nesta pasta. Ele precisa ficar
+   na raiz do site, junto dos HTMLs, senao o botao "Baixar em PDF" nao funciona.
 2. Se o projeto no Vercel ja tiver um vercel.json, junte o bloco "headers".
 
 DEPOIS DE SUBIR
