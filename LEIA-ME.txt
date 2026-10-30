@@ -12,7 +12,11 @@ Novos:
   og-artigo-3.jpg, og-guia-agentes.jpg   imagens de compartilhamento
   vercel.json                   impede o Google de indexar o guia e o PDF
 
+  mentoria.html                 pagina da mentoria, com candidatura (Formspree)
+  og-mentoria.jpg               imagem de compartilhamento da mentoria
+
 Atualizados:
+  index.html                    link "Mentoria" no menu
   artigos.html                  artigo 003 no topo da lista
   sitemap.xml                   captacao e artigo 003 incluidos
 
