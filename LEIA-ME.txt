@@ -12,7 +12,7 @@ Novos:
   og-artigo-3.jpg, og-guia-agentes.jpg   imagens de compartilhamento
   vercel.json                   impede o Google de indexar o guia e o PDF
 
-  mentoria.html                 pagina da mentoria, com candidatura (Formspree)
+  mentoria.html                 pagina da mentoria, com candidatura (Formspree proprio: xgaazbnd)
   og-mentoria.jpg               imagem de compartilhamento da mentoria
 
 Atualizados:
