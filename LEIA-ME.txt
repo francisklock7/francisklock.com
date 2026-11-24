@@ -34,3 +34,24 @@ LINKS COM ORIGEM (para saber de onde vem cada lead)
 Bio do Instagram:  francisklock.com.br/guia-agentes.html?utm_source=instagram&utm_medium=bio
 Stories:           francisklock.com.br/guia-agentes.html?utm_source=instagram&utm_medium=stories
 LinkedIn:          francisklock.com.br/guia-agentes.html?utm_source=linkedin&utm_medium=post
+
+
+--- ENCONTRO "COMO SER O GESTOR DA CARREIRA DO TEU FILHO" (12/12) ---
+Arquivos (subir na raiz do Vercel):
+ gestor-da-carreira.html            pagina do encontro (video, conteudo, duvidas)
+ gestor-da-carreira-inscricao.html  pagina do formulario (noindex)
+ evento-config.js                   configuracao unica das duas paginas
+ evento.css                         visual das duas paginas
+ ev-del-valle.jpg, ev-conmebol.jpg, ev-barcelona.jpg   fotos da secao "Quem apresenta"
+ og-gestor-carreira.jpg             imagem de compartilhamento
+ video-evento.mp4 e video-evento-poster.jpg   video da capa da pagina do evento (H.264, 720x1280)
+Mexe so no evento-config.js:
+ video: cola o link do YouTube, Vimeo ou .mp4. Vazio = espaco reservado.
+ vagasRestantes: atualizar a mao conforme pagamentos aprovados. Em 0 vira lista de espera.
+ linkCombo: link unico de R$ 258 (encontro + orientacao), opcional.
+ endpoint: trocar por um Formspree proprio do evento.
+O cliente precisa usar o mesmo e-mail no formulario e no Mercado Pago.
+
+VIDEO DA CAPA
+O video fica no arquivo video-evento.mp4 (ja convertido, 6 MB). Para trocar, substitua o arquivo mantendo o mesmo nome,
+ou mude o campo video no evento-config.js (aceita link do YouTube, Vimeo ou outro .mp4). O campo poster e a imagem de capa.
