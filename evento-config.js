@@ -1,6 +1,6 @@
 /* ===== CONFIGURAÇÃO: é aqui que tu mexe ===== */
 const CONFIG = {
-  endpoint: "https://formspree.io/f/mnppvozd",   // Formspree que recebe as inscrições
+  endpoint: "https://formspree.io/f/xrpqrrld",   // Formspree que recebe as inscrições
   linkEvento: "https://mpago.la/2J9HNC4",        // R$ 59
   linkUpsell: "https://mpago.la/1ii3QUk",        // R$ 199
   linkCombo: "",                                  // opcional: link único de R$ 258 (encontro + orientação)

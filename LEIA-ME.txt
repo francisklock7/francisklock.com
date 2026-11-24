@@ -49,7 +49,7 @@ Mexe so no evento-config.js:
  video: cola o link do YouTube, Vimeo ou .mp4. Vazio = espaco reservado.
  vagasRestantes: atualizar a mao conforme pagamentos aprovados. Em 0 vira lista de espera.
  linkCombo: link unico de R$ 258 (encontro + orientacao), opcional.
- endpoint: trocar por um Formspree proprio do evento.
+ endpoint: ja aponta para o Formspree proprio do evento (xrpqrrld).
 O cliente precisa usar o mesmo e-mail no formulario e no Mercado Pago.
 
 VIDEO DA CAPA

@@ -240,3 +240,4 @@ footer a{text-decoration:none}
 .vplay i{width:84px;height:84px;border-radius:50%;background:var(--yellow);display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .15s}
 .vplay:hover i{transform:scale(1.07)}
 .vplay i::after{content:"";border-left:20px solid var(--ink);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px}
+.form-page .facts{grid-template-columns:1fr 1fr}
