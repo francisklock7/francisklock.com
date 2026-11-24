@@ -120,16 +120,6 @@
           </form>
         </div>
 
-        <!-- VISÃO 2: dois pagamentos (quando não há link combinado) -->
-        <div class="view" id="view-pay">
-          <h2>Falta só o pagamento.</h2>
-          <p class="lead">Como tu escolheu a Orientação Individual, são dois pagamentos separados. <strong>Usa o mesmo e-mail nos dois.</strong></p>
-          <ol class="pay-steps">
-            <li><div class="k">1. O encontro, R$ 59</div><a class="pay-btn" id="pay-evento" href="#" target="_blank" rel="noopener">Pagar o encontro</a></li>
-            <li><div class="k">2. A Orientação Individual, R$ 199</div><a class="pay-btn" id="pay-upsell" href="#" target="_blank" rel="noopener">Pagar a orientação</a></li>
-          </ol>
-          <p class="fine">Os dois pagamentos são feitos pelo Mercado Pago.</p>
-        </div>
 
         <!-- VISÃO 3: vagas esgotadas / lista de espera -->
         <div class="view" id="view-soldout">
@@ -168,7 +158,7 @@ const $ = (id) => document.getElementById(id);
 const fmt = (n) => "R$ " + n;
 
 function show(view) {
-  ["view-form", "view-pay", "view-soldout"].forEach(v => $(v).classList.toggle("on", v === view));
+  ["view-form", "view-soldout"].forEach(v => $(v).classList.toggle("on", v === view));
 }
 
 function renderVagas() {
@@ -270,11 +260,7 @@ $("reg-form").addEventListener("submit", async (e) => {
     return;
   }
 
-  if (!upsell) { window.location.href = CONFIG.linkEvento; return; }
-  if (CONFIG.linkCombo) { window.location.href = CONFIG.linkCombo; return; }
-  $("pay-evento").href = CONFIG.linkEvento;
-  $("pay-upsell").href = CONFIG.linkUpsell;
-  show("view-pay");
+  window.location.href = upsell ? CONFIG.linkCombo : CONFIG.linkEvento;
 });
 
 $("wait-form").addEventListener("submit", async (e) => {

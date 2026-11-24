@@ -1,9 +1,8 @@
 /* ===== CONFIGURAÇÃO: é aqui que tu mexe ===== */
 const CONFIG = {
   endpoint: "https://formspree.io/f/xrpqrrld",   // Formspree que recebe as inscrições
-  linkEvento: "https://mpago.la/2J9HNC4",        // R$ 59
-  linkUpsell: "https://mpago.la/1ii3QUk",        // R$ 199
-  linkCombo: "",                                  // opcional: link único de R$ 258 (encontro + orientação)
+  linkEvento: "https://mpago.la/2J9HNC4",        // só o encontro, R$ 59
+  linkCombo: "https://mpago.la/1ii3QUk",         // encontro + Orientação Individual, R$ 258
   video: "video-evento.mp4",                      // vídeo da capa (arquivo .mp4 na raiz, ou link do YouTube/Vimeo). Vazio = espaço reservado
   poster: "video-evento-poster.jpg",              // imagem de capa do vídeo (só pra .mp4)
   precoEvento: 59,
