@@ -56,3 +56,8 @@ O cliente precisa usar o mesmo e-mail no formulario e no Mercado Pago.
 VIDEO DA CAPA
 O video fica no arquivo video-evento.mp4 (ja convertido, 6 MB). Para trocar, substitua o arquivo mantendo o mesmo nome,
 ou mude o campo video no evento-config.js (aceita link do YouTube, Vimeo ou outro .mp4). O campo poster e a imagem de capa.
+
+ARTIGO 004 (26/11/2026)
+- artigo-educacao-e-futebol.html + og-artigo-4.jpg: artigo "É mais fácil vender gelo no Polo Norte do que educação no Brasil".
+- Card adicionado em artigos.html e URL no sitemap.xml.
+- CTA do artigo leva para gestor-da-carreira.html com utm_campaign=artigo-004.
